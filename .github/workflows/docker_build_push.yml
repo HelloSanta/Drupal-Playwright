@@ -46,6 +46,14 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWD }}
       -
+        name: Build and push 8.4
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: ${{ github.event_name != 'pull_request' }}
+          file: ./8.4/Dockerfile
+          tags: hellosanta/drupal-playwright:8.4
+      -
         name: Build and push 8.3
         uses: docker/build-push-action@v5
         with:

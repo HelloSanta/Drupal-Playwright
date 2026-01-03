@@ -21,6 +21,7 @@ COPY . /var/www/html
 
 ## Available Tags
 
+- `8.4` - PHP 8.4 with Playwright support
 - `8.3` - PHP 8.3 with Playwright support
 
 ## Building Locally
